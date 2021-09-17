@@ -6,10 +6,12 @@ import { submitMeeting, updateTheMeeting } from '../../store/meeting';
 import { validateForm } from '../../utils/validation-util';
 
 const Schedule = ({ computedMatch }) => {
-    const [date, setDate] = useState('');
-    const [name, setName] = useState('');
-    const [description, setDescription] = useState('');
-    const [attendees, setAttendees] = useState(['']);
+    const [form, setForm] = useState({
+        date: '',
+        name: '',
+        description: '',
+        attendees: [''],
+    });
     const [formError, setFormError] = useState(null);
     const [isUpdating, setIsUpdating] = useState(false);
     const [meetingId, setMeetingId] = useState(false);
@@ -19,6 +21,12 @@ const Schedule = ({ computedMatch }) => {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    const updateFormValue = (key, value) => {
+        const newForm = { ...form };
+        newForm[key] = value;
+        setForm(newForm);
+    }
+
     useEffect(() => {
         const { id } = computedMatch.params;
         if (id) {
@@ -27,14 +35,12 @@ const Schedule = ({ computedMatch }) => {
         }
         if (id && meetings.length) {
             const meeting = meetings.filter((meeting) => meeting.id === id)[0];
-            setDate(meeting.date);
-            setName(meeting.name);
-            setDescription(meeting.description);
-            setAttendees(meeting.attendees);
+            setForm({ ...meeting });
         }
-    }, [meetings])
+    }, [meetings]);
 
     const submit = () => {
+        const { date, name, description, attendees } = form;
         const formValues = { date, name, description, attendees };
         const validationResult = validateForm(formValues);
         if(validationResult !== "valid") {
@@ -53,8 +59,9 @@ const Schedule = ({ computedMatch }) => {
 
     return (
         <ScheduleLayout
-            formObj={{date, name, description, attendees, error, formError}}
-            fn={{submit, setDate, setName, setDescription, setAttendees}}
+            formObj={form}
+            formError={formError}
+            fn={{submit, updateFormValue}}
             isUpdating={isUpdating}
         />
     );

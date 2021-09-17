@@ -8,21 +8,19 @@ const Input = ({ title, onChange, value, style, type, placeholder, onKeyPress })
         const newChoiceList = [...value];
         // Append new email to existing emails list
         newChoiceList.push('');
-        onChange(newChoiceList); // Set new values array to old array
+        onChange('attendees', newChoiceList); // Set new values array to old array
     };
     const removeEmail = (i) => {
         const newValues = [...value];
-        console.log('array before', value);
         newValues.splice(i, 1);
-        console.log('array after', value);
         // Append new email to existing emails list
-        onChange(newValues); // Set new values array to old array
+        onChange('attendees', newValues); // Set new values array to old array
     };
 
     const saveValue = (index, val) => {
         const newValues = [...value];
         newValues[index] = val; // Set new value
-        onChange(newValues); // Update array of emails
+        onChange('attendees', newValues); // Update array of emails
     };
 
     switch (type) {
