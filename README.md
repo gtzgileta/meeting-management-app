@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Users
+
+Your will find the available users at `public/users.json`, default password is `test`.
+
 ## Available Scripts
 
 In the project directory, you can run:
