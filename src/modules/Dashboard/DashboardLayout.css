@@ -1,0 +1,33 @@
+#container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 100px;
+}
+
+#container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+ul#meeting-details {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 0;
+}
+ul#meeting-details li {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 14px 5px;
+    border-bottom: 1px solid #ddd;
+}
+ul#meeting-details li div:nth-child(2) {
+    text-align: right;
+}
+ul#meeting-details li:last-child {
+    border: none
+}

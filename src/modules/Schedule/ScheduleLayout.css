@@ -1,0 +1,23 @@
+.schedule-screen button {
+    background: #6A9D67;
+    width: 100%;
+    padding: 14px 16px;
+    margin: 0;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #FFF;
+    border: 0;
+    transition: background .15s ease, border .15s ease;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: 0;
+}
+.schedule-screen button:hover {
+    background: #588757;
+}
+.schedule-screen .error {
+    margin: 10px 0;
+    font-size: 14px;
+    color: red;
+}

@@ -1,0 +1,40 @@
+.app-input label {
+    display: block;
+    font-size: 14px;
+    color: #70665E;
+}
+.app-input input {
+    display: block;
+    width: 100%;
+    padding: 15px 5px;
+    margin-bottom: 15px;
+    border: 0;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    font-size: 22px;
+}
+
+.fields-list li {
+    position: relative;
+    list-style: none;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.fields-list .options-input {
+    width: calc(100% - 38px);
+    padding: 0 10px;
+}
+
+.fields-list .add {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    cursor: pointer;
+    color: #999;
+    opacity: .8;
+    font-size: 24px;
+}

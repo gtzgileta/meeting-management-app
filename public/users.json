@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Main",
+            "email": "gtzgileta@gmail.com",
+            "password": "test"
+        },
+        {
+            "id": 2,
+            "name": "Manjunath Seetharamaiah",
+            "email": "manjunath.seetharamaiah@oracle.com",
+            "password": "test"
+        },
+        {
+            "id": 3,
+            "name": "Santhosh Subramegowda",
+            "email": "santosh.x.gowda@oracle.com",
+            "password": "test"
+        },
+        {
+            "id": 4,
+            "name": "Naveen Sharma",
+            "email": "naveen.ns.sharma@oracle.com",
+            "password": "test"
+        }
+    ]
+}
